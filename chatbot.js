@@ -5,7 +5,7 @@
   // After deploying the api-server to Vercel, paste the URL here.
   // Example: 'https://oswi-api.vercel.app/api/chat'
   // This is safe to be public — it's just a URL, not a key.
-  const API_URL = "https://your-api-server.vercel.app/api/chat";
+  const API_URL = "https://portfolio-web-api-alpha.vercel.app/api/chat";
 
   /* ─────────────────────────────────────────
      AVAILABILITY HELPERS
