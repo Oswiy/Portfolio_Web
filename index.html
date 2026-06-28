@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Oswi — Web Developer"
+      content="Oswi — Web Developer and AI Builder based in Baguio City, Philippines."
     />
     <title>Oswi — Web Developer</title>
 
@@ -17,6 +17,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot.css" />
   </head>
   <body>
     <!-- ─── NAV ─── -->
@@ -37,6 +38,7 @@
       <!-- ─── HERO ─── -->
       <div class="hero">
         <div class="hero__left">
+          <p class="hero__label">Available for freelance</p>
           <h1 class="hero__name">Oswi</h1>
           <div class="hero__actions">
             <a href="#work" class="btn btn--primary">See my work</a>
@@ -45,11 +47,12 @@
         </div>
         <div class="hero__right">
           <p class="hero__role">
-            <strong>Web Developer</strong><br />
+            <strong>Web Developer</strong> &amp; AI Builder<br />
             Baguio City, Philippines
           </p>
           <p class="hero__tagline">
             I build clean websites and AI-powered tools for businesses.
+            Final-year IT student, Accenture intern, shipping real products.
           </p>
         </div>
       </div>
@@ -84,8 +87,20 @@
                 <div class="fact__value">University of the Cordilleras</div>
               </div>
               <div class="fact">
+                <div class="fact__label">Graduating</div>
+                <div class="fact__value">September 2026</div>
+              </div>
+              <div class="fact">
+                <div class="fact__label">Internship</div>
+                <div class="fact__value">Accenture — Cloud Elite</div>
+              </div>
+              <div class="fact">
                 <div class="fact__label">Based in</div>
                 <div class="fact__value">Baguio City, Philippines</div>
+              </div>
+              <div class="fact">
+                <div class="fact__label">Open to</div>
+                <div class="fact__value">Freelance &amp; junior roles</div>
               </div>
             </div>
           </div>
@@ -174,6 +189,34 @@
                   rel="noopener"
                   class="project__link project__link--muted"
                   >GitHub</a
+                >
+              </div>
+            </div>
+
+            <!-- Habit Tracker -->
+            <div class="project">
+              <div class="project__num">02</div>
+              <div>
+                <span class="project__badge project__badge--green">Live</span>
+                <h2 class="project__name">Habit Tracker</h2>
+                <p class="project__desc">
+                  A lightweight habit tracking app built in vanilla JavaScript.
+                  Focus on clean DOM manipulation, localStorage persistence, and
+                  a fully responsive UI. Deployed on GitHub Pages.
+                </p>
+                <div class="project__stack">
+                  <span class="tag">Vanilla JS</span>
+                  <span class="tag">HTML / CSS</span>
+                  <span class="tag">GitHub Pages</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a
+                  href="https://oswiy.github.io/Habit-Tracker/"
+                  target="_blank"
+                  rel="noopener"
+                  class="project__link"
+                  >Live →</a
                 >
               </div>
             </div>
@@ -322,10 +365,12 @@
 
     <!-- ─── FOOTER ─── -->
     <footer class="footer">
-      <span>© 2026 Oswi.</span>
+      <span>© 2026 Oswi. Baguio City, Philippines.</span>
       <a href="#">Back to top ↑</a>
     </footer>
 
     <script src="main.js"></script>
+    <script src="config.js"></script>
+    <script src="chatbot.js"></script>
   </body>
 </html>
