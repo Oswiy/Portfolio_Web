@@ -291,7 +291,7 @@ If asked who built you: "I was built by ${CONFIG.name} as part of his AI tools f
     ta.value = "";
     autoResize(ta);
     appendUserMsg(text);
-    chatHistory.push({ role: "user", parts: [{ text }] });
+    chatHistory.push({ role: "user", content: text });
 
     isTyping = true;
     showTyping();
@@ -313,7 +313,7 @@ If asked who built you: "I was built by ${CONFIG.name} as part of his AI tools f
       }
 
       hideTyping();
-      chatHistory.push({ role: "model", parts: [{ text: data.reply }] });
+      chatHistory.push({ role: "assistant", content: data.reply });
       appendBotMsg(data.reply);
     } catch (err) {
       hideTyping();
