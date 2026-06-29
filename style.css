@@ -19,8 +19,15 @@
   --ink-3: #6b6b68;
   --rule: #d8d6d0;
   --card: #eceae6;
-  --accent: #2563eb;
-  --accent-bg: #eef3fd;
+  --accent: #c0c0c0; /* silver accent */
+  --accent-dim: #888888; /* dimmer silver */
+
+  /* Nav dark palette */
+  --nav-bg: #0e0e0e;
+  --nav-border: #2a2a2a;
+  --nav-ink: #a8a8a8;
+  --nav-ink-h: #f0f0f0;
+  --nav-logo: #e8e8e8;
 
   --font-disp: "Instrument Serif", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -52,16 +59,26 @@ a {
 }
 
 /* ─────────────────────────────────────────
-   NAV
+   NAV — dark gunmetal
 ───────────────────────────────────────── */
 .nav {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(245, 244, 240, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--rule);
+  background: var(--nav-bg);
+  /* Subtle silver shimmer line at the bottom */
+  border-bottom: 1px solid transparent;
+  background: #0e0e0e00;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+      275deg,
+      #00000026 0%,
+      #000000 20%,
+      #000000 50%,
+      #000000 80%,
+      #00000000 100%
+    )
+    1;
 }
 
 .nav__inner {
@@ -77,8 +94,12 @@ a {
 .nav__logo {
   font-family: var(--font-disp);
   font-size: 20px;
-  color: var(--ink);
   letter-spacing: -0.01em;
+  /* Metallic silver gradient on the logo */
+  background: linear-gradient(135deg, #e8e8e8 0%, #a0a0a0 50%, #d0d0d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #000000;
+  background-clip: text;
 }
 
 .nav__links {
@@ -88,19 +109,25 @@ a {
 }
 
 .nav__links a {
-  font-size: 14px;
-  color: var(--ink-2);
+  font-size: 13.5px;
+  color: #000000;
   font-weight: 400;
+  letter-spacing: 0.01em;
   transition: color 0.15s;
 }
 
 .nav__links a:hover {
-  color: var(--ink);
+  color: #000000ad;
 }
 
 .nav__cta {
-  color: var(--accent) !important;
+  color: #000000;
   font-weight: 500 !important;
+  transition: color 0.15s;
+}
+
+.nav__cta:hover {
+  color: #000000;
 }
 
 /* ─────────────────────────────────────────
@@ -144,8 +171,12 @@ a {
   font-size: clamp(80px, 9vw, 128px);
   line-height: 0.92;
   letter-spacing: -0.04em;
-  color: var(--ink);
   margin-bottom: 32px;
+  /* Metallic silver-to-white gradient on the name */
+  background: linear-gradient(160deg, #1a1a1a 0%, #3a3a3a 30%, #1a1a1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   animation: breathe 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -246,7 +277,6 @@ a {
   margin: 0 auto;
 }
 
-/* Two-column section layout: label left, content right */
 .section__inner {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -255,11 +285,11 @@ a {
 }
 
 .section__label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: rgba(0, 0, 0, 0.853);
   padding-top: 4px;
   position: sticky;
   top: 80px;
@@ -421,13 +451,13 @@ a {
 .project__link {
   font-size: 13px;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--ink);
   white-space: nowrap;
-  transition: opacity 0.15s;
+  transition: color 0.15s;
 }
 
 .project__link:hover {
-  opacity: 0.7;
+  color: var(--ink-3);
 }
 
 .project__link--muted {
@@ -443,8 +473,8 @@ a {
   text-transform: uppercase;
   padding: 3px 9px;
   border-radius: 3px;
-  background: var(--accent-bg);
-  color: var(--accent);
+  background: #ebebeb;
+  color: #444;
   margin-bottom: 10px;
 }
 
